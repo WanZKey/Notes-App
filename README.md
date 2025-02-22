@@ -4,6 +4,8 @@
 
 Notes App ini adalah aplikasi web sederhana yang memungkinkan kalian untuk membuat, melihat, mengedit, dan menghapus catatan. Desainnya responsif, menggunakan teknologi web modern seperti HTML, CSS, dan JavaScript.
 
+Klik [di sini](https://wanzkey.github.io/Notes-App/) untuk melihat aplikasi web ini.
+
 ## Fitur
 
 - **Tambah Catatan Baru**: Kalian bisa menambahkan catatan baru melalui formulir yang mudah digunakan.
