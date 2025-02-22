@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes App</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Notes App</h1>
+      <div class="search-container">
+        <label for="search-input">Search Notes:</label>
+        <input type="text" id="search-input" placeholder="Search notes..." />
+      </div>
+    </header>
+    <main>
+      <note-form></note-form>
+      <section id="notes-container">
+        <!-- Notes will be dynamically added here -->
+      </section>
+    </main>
+    <footer>
+      <p>Submission Proyek Pertama By @WanZKey</p>
+    </footer>
+    <script src="app.js"></script>
+    <script src="components/note.js"></script>
+  </body>
+</html>
