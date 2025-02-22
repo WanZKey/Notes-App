@@ -1,0 +1,228 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f1faee;
+  color: #1d3557;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #1d3557;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+main {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+footer {
+  background-color: #1d3557;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+}
+
+#notes-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 2rem; /* Tambahkan jarak atas */
+}
+
+.note {
+  border: 1px solid #457b9d;
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: #a8dadc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 200px; /* Set minimum height */
+}
+
+.note:hover {
+  transform: scale(1.05);
+}
+
+.note button {
+  display: none; /* Hide buttons by default */
+}
+
+.note:hover button {
+  display: inline-block; /* Show buttons on hover */
+}
+
+.note .options {
+  display: none; /* Hide options by default */
+}
+
+.note.show-options .options {
+  display: flex; /* Show options when .show-options class is added */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.note .options button {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.note .options #delete-button {
+  background-color: #e74c3c; /* Red color for delete button */
+  color: white;
+}
+
+.note .options #edit-button {
+  background-color: #f1c40f; /* Yellow color for edit button */
+  color: #2c3e50;
+}
+
+.note .options #delete-button:hover {
+  background-color: #c0392b;
+}
+
+.note .options #edit-button:hover {
+  background-color: #f39c12;
+}
+
+.note h2 {
+  margin: 0 0 0.25rem; /* Kurangi jarak bawah */
+  font-size: 1.25rem;
+  color: #1d3557;
+}
+
+.note p {
+  color: #333; /* Ubah warna font isi notes menjadi lebih mudah dibaca */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #a8dadc;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 2rem; /* Tambahkan jarak bawah */
+}
+
+input,
+textarea,
+button {
+  padding: 1rem; /* Perbesar padding */
+  font-size: 1.25rem; /* Perbesar ukuran font */
+  border: 1px solid #457b9d;
+  border-radius: 5px;
+}
+
+textarea {
+  height: 200px; /* Perbesar tinggi textarea */
+}
+
+button {
+  background-color: #457b9d;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #1d3557;
+}
+
+#error {
+  color: #e63946;
+  font-size: 0.875rem;
+}
+
+#search-input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #457b9d;
+  border-radius: 5px;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #a8dadc;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 2rem;
+}
+
+.edit-form input,
+.edit-form textarea,
+.edit-form button {
+  padding: 1rem;
+  font-size: 1.25rem;
+  border: 1px solid #457b9d;
+  border-radius: 5px;
+}
+
+.edit-form textarea {
+  height: 200px;
+}
+
+.edit-form button {
+  background-color: #457b9d;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.edit-form button:hover {
+  background-color: #1d3557;
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 0.5rem;
+  }
+
+  form {
+    padding: 0.5rem;
+  }
+
+  .note {
+    padding: 0.5rem;
+  }
+}
